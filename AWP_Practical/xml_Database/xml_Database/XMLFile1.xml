@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<students>
+  <student>
+    <rollno>1</rollno>
+    <sname>Sam</sname>
+  </student>
+  <student>
+    <rollno>2</rollno>
+    <sname>Cam</sname>
+  </student>
+  <student>
+    <rollno>3</rollno>
+    <sname>Tam</sname>
+  </student>
+  <student>
+    <rollno>4</rollno>
+    <sname>Pam</sname>
+  </student>
+</students>
