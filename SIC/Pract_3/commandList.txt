@@ -1,0 +1,20 @@
+line vty 0 4
+password vtypa55
+login
+
+enable secret enpa55
+
+
+part B
+
+line console 0
+password tyit
+login
+
+ip domain-name ccnasecurity.com
+
+username admin secret adminpa55
+
+line vty 0 4
+login local
+crypto key generate rsa

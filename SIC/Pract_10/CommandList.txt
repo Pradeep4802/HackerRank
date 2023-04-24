@@ -1,0 +1,96 @@
+Part 1: Configure Router
+
+/* To all router */
+enable secret enpa55
+
+/* To all router */
+line console 0
+password conpa55
+login
+
+/* To all router */
+ip domain-name ccnasecurity.com
+username admin secret pa55
+line vty 0 4
+login local
+crypto key generate rsa
+
+/* Only on R1 */
+router ospf 1
+network 209.165.200.0 0.0.0.7 area 0
+network 10.1.1.0 0.0.0.3 area 0
+
+/* Only on R2 */
+router ospf 1
+network 10.1.1.0 0.0.0.3 area 0
+network 10.2.2.0 0.0.0.3 area 0
+
+/* Only on R3 */
+router ospf 1
+network 172.16.3.0 0.0.0.255 area 0
+network 10.2.2.0 0.0.0.3 area 0
+
+Part 2: Verify Connectivity and Explore the ASA
+
+PCC -> R1, R2, R3
+PCC -> ASA, PC-B, DMZ server. 
+
+Part 3: Configure ASA Settings and Interface Security Using the 
+CLI
+
+/* ASA# */
+show version
+show file system
+show flash:
+
+/* ASA (config)# */
+hostname CCNAS-ASA
+
+
+/* CCNAS-ASA (config)# */
+domain-name ccnasecurity.com
+enable password enpa55
+clock set 21:24:00 31 March 2022
+
+int vlan 1
+nameif inside
+ip address 192.168.1.1 255.255.255.0
+security-level 100
+int vlan 2
+nameif outside
+ip address 209.165.200.226 255.255.255.248
+security-level 0
+
+/* CCNAS-ASA# */
+show int ip brief
+show ip address
+show switch vlan
+
+PCB -> ASA
+PCB -> R1
+
+Part 4: Configure Routing, Address Translation, and Inspection 
+Policy Using the CLI
+
+/* CCNAS-ASA# */
+show route
+
+/* CCNAS-ASA(config)# */
+route outside 0.0.0.0 0.0.0.0 209.165.200.225
+
+/* CCNAS-ASA# */
+show route
+
+ASA -> R1 
+
+/* CCNAS-ASA(config)# */
+object network inside-net
+
+/* CCNAS-ASA(config-network-object)# */
+subnet 192.168.1.0 255.255.255.0
+nat (inside,outside) dynamic interface
+end
+
+/* CCNAS-ASA# */
+show run
+
