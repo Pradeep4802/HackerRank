@@ -1,9 +1,0 @@
-rainfall=c(799,1174,865,1334.6,635.4,918.5,1071,677,896.7,1300,765.4)
-rainfall.timeseries=ts(rainfall,start=c(2012,1),frequency = 12)
-
-print(rainfall.timeseries)
-
-png(file="rainfall.png")
-
-plot(rainfall.timeseries)
-dev.off()
