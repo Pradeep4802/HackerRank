@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Practice</title>
+  </head>
+  <body>
+    <p>Hello How are you</p>
+  </body>
+  <script>
+    function findString(arr) {
+      let newArr = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > 5) {
+          newArr.push(arr[i]);
+        }
+      }
+      return newArr;
+    }
+
+    function retKeysArr(obj) {
+      const keys = Object.keys(obj);
+
+      return keys;
+    }
+
+    function retvalues(arr, propName) {
+      const values = arr.map((obj) => obj[propName]);
+
+      return values;
+    }
+
+    // const str = ["Pradeep","Suraj","Abhinay","Kiran","Kabeer","Nikhil"];
+    // console.log(findString(str));
+    // console.log(findString(["apple", "banana", "kiwi", "watermelon", "orange"]));
+
+    let obj = {
+      Name: "Pradeep",
+      Age: 18,
+      College: "MCC",
+      Address: "Navi mumbai",
+    };
+    // console.log(retKeysArr(obj));
+
+    const people = [
+      { name: "Pranay", age: 20, gender: "male" },
+      { name: "Nidhi", age: 21, gender: "female" },
+      { name: "Soumya", age: 21, gender: "male" },
+    ];
+
+    let arrObj = [{ Id: 101 }, { name: "Pradeep" }, { age: 21 }];
+    // console.log(retvalues(arrObj, "name"));
+    // console.log(retvalues(people, "name"));
+    // console.log(retvalues(people, "gender"));
+    // console.log(retvalues(people, "age"));
+
+    const arr1 = [
+      { name: "apple", price: 1 },
+      { name: "banana", price: 2 },
+      { name: "orange", price: 3 },
+    ];
+    const maxObj1 = findMaxByProperty(arr1, "price");
+    console.log(maxObj1); // { name: 'orange', price: 3 }
+
+    function findMaxByProperty(arr, prop) {
+      // Check if the array is empty
+      if (arr.length === 0) {
+        return null;
+      }
+
+      // Initialize maxObj to first object in the array
+      let maxObj = arr[0];
+
+      // Loop through the array starting at second object
+      for (let i = 1; i < arr.length; i++) {
+        // Check if the current object's property value is greater than maxObj's property value
+        if (arr[i][prop] > maxObj[prop]) {
+          // If yes, update maxObj to current object
+          maxObj = arr[i];
+        }
+      }
+
+      // Return the object with highest value for the specified property
+      return maxObj;
+    }
+  </script>
+</html>
