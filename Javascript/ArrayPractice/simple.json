@@ -1,0 +1,12 @@
+{
+  "name1": {
+    "FirstName": "Pradeep",
+    "LastName": "Pal",
+    "Age": 21
+  },
+  "name2": {
+    "FirstName": "Nikhil",
+    "LastName": "Maurya",
+    "Age": 23
+  }
+}

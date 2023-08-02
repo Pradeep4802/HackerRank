@@ -60,8 +60,8 @@
       { name: "banana", price: 2 },
       { name: "orange", price: 3 },
     ];
-    const maxObj1 = findMaxByProperty(arr1, "price");
-    console.log(maxObj1); // { name: 'orange', price: 3 }
+    // const maxObj1 = findMaxByProperty(arr1, "price");
+    // console.log(maxObj1); // { name: 'orange', price: 3 }
 
     function findMaxByProperty(arr, prop) {
       // Check if the array is empty
@@ -84,5 +84,14 @@
       // Return the object with highest value for the specified property
       return maxObj;
     }
+
+    const employees = [
+      { name: "aadil", age: 27 },
+      { name: "aadil", age: 27 },
+      { name: "aadil", age: 27 },
+      { name: "aadil", age: 27 },
+    ];
+    let val = JSON.stringify(employees);
+    console.log( val);
   </script>
 </html>
