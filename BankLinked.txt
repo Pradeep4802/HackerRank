@@ -1,0 +1,43 @@
+********/ This Project is an Console based application /********
+
+The Banking Management System is an Online application for an Organization. It has been developed on java. It is a virtual showcase for managing dif-
+ferent types of withdrowal, deposit, loan. The project Banking Management System wil reduce the amount of time spent by the employees of the com- |
+pany and also provides a convenient and efficient means of reaching to persons using cutting-edge-technologies. The main goal is targeting towards
+smooth internal communication and functioning for the customers along with other useful information.
+
+
+The Functionalities provided by Banking Management System are as follows:
++ The Internet Appliances takes care of the requirements put forward by the customers through web for Banking Management System
+« Provides the searching facilities based on various factors. Such as withdrowal, deposit, loan
++ Banking Management System also sells the deposit online for withdrowal, deposit, loan.
++ Banking Management System keeps track of the transaction of all withdrowal, deposit, loan.
+« Shows the information and description of the deposit.
+« It deals with monitoring the information and transactions.
+« Provides the administrator facilties to update the list of deposit online without FTP.
++ Manages all the crud application for withdrowal, epost, loan |
++ withdrowal: ithdrowal ist to be maintained to display the details of the withdrowal to the users. |
+« Users: This system will have the information about the Users who is registered with the site. They can view and purchase the deposit.
+«+ Administrator: Administrator will have facility to add, delete, and modify withdrowal, deposit, loan and he can view reports also.
+
+Flow of Program:
+
+Step 1 : There will be 3 option like 1) saving, 2) current and 3) FD Account.
+	 User need to type the name of the account type.
+Step 2 : After selecting, There are 2 option 1) REGISTER 2) LOGIN
+	 If User selct option 1 then input interface will prompt and ask for input from user like User ID, Name, Email, cotact, Password, Address.
+	 After providing input successfully, System again ask for a option.
+Step 3 : If User select option 2 for login then System wil ask for Account number and Password to verify the user.
+Step 4 : After Successfull Login, There will be 5 otion like 1) check user details, 2) Check Balance 3) Deposit Money 4) Withdraw Cash 5) Exit
+	 If option 1 was selected then User information will be displayed by the system.
+ 	 If option 2 was selected then updated Account Balance will be displayed.
+	 If option 3 was selected then System will ask to enter deposit amount to deposit in account.
+	 If option 4 was selected then System will ask How much amount you want withdraw/ System will deduct this amount from your account.
+	 If option 5 was selected then program will return to Home section. 
+	 Then again Register and Login option will show and User need to select option.
+
+Some Info:
+1) In Saving account, If your withdraw Amount was greater than a current balance then "Amount is not Sufficient" prompt will shown.
+2) In Current Account, There are OverDraft facilities provided if withdraw amount is greater than current balance.
+3) In FD, Only FD plan will shown to the user. User need to enter amount and system will provide interest rate.
+
+Github Link : https://github.com/Pradeep4802/JavaProject.git
